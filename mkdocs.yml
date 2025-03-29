@@ -47,7 +47,7 @@ extra:
     - icon: fontawesome/solid/paper-plane
       link: mailto:<adhikari.rojan619@gmail.com>
       name: Email
-    - icon: octicons/smiley-16
+    - icon: fontawesome/solid/r
       link: https://rojanadhikari.dev/
       name: Website
 copyright: Copyright &copy; 2025 Rojan Adhikari
