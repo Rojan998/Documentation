@@ -1,0 +1,53 @@
+site_name: Devops
+site_url: https://docs.rojanadhikari.dev
+markdown_extensions:
+  - attr_list
+theme: 
+  name: material
+  language: en
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - content.code.copy
+    - toc.follow
+    # - toc.integrate
+    # - navigation.top
+
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+ 
+nav: 
+  - Jenkins: jenkins.md
+
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin 
+      link: https://www.linkedin.com/in/rojan998/
+      name: Linkedin
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:<adhikari.rojan619@gmail.com>
+      name: Email
+    - icon: octicons/smiley-16
+      link: https://rojanadhikari.dev/
+      name: Website
+copyright: Copyright &copy; 2025 Rojan Adhikari
