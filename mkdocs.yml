@@ -11,7 +11,7 @@ theme:
     - navigation.instant
     - navigation.instant.progress
     - navigation.sections
-    - navigation.expand
+    # - navigation.expand
     - navigation.path
     - content.code.copy
     - toc.follow
@@ -40,28 +40,36 @@ theme:
  
 nav: 
   - Jenkins: 
-    - Jenkins: jenkins.md
-    - Jenkins-Docker: jenkins-docker.md
-    - Jenkins-Docker-K8s: jenkins-docker-k8s.md
-    - Jenkins-Buildtools: jenkins-buildtools.md
-    - Jenkins-master-slave: jenkins-master-slave.md
+      - Overview: jenkins.md
+      - Docker Integration:
+          - Jenkins-Docker: jenkins-docker.md
+          - Jenkins-Docker-K8s: jenkins-docker-k8s.md
+      - Build Tools:
+          - Jenkins-Buildtools: jenkins-buildtools.md
+          - Jenkins-master-slave: jenkins-master-slave.md
   - Docker:
-    - Docker: docker.md
-    - Docker-compose: docker-compose.md
-    - Jenkins-Docker: jenkins-docker.md
-  
-  - EKS: eks.md
-  - Sonarqube: sonarqube.md
-  - Nexus: nexus.md
-  - ELK stack: elk-stack.md
-  - Devops: devops.md
-  - Jenkins-Docker-K8s: jenkins-docker-k8s.md
-  - Ansible: ansible.md
-  - MySQLDb: mysql.md
-  - MiniKube: minikube.md
-  - Terraform: terraform.md
-  - Terraform1: terraform1.md
-
+      - Overview: docker.md
+      - Tools:
+          - Docker-compose: docker-compose.md
+          - Jenkins-Docker: jenkins-docker.md
+  - Cloud Platforms:
+      - EKS: eks.md
+      - MiniKube: minikube.md
+      - Terraform:
+          - Overview: terraform.md
+          - Advanced: terraform1.md
+  - CI/CD Tools:
+      - Sonarqube: sonarqube.md
+      - Nexus: nexus.md
+      - Jenkins-Docker-K8s: jenkins-docker-k8s.md
+  - Monitoring and Logging:
+      - ELK stack: elk-stack.md
+  - Configuration Management:
+      - Ansible: ansible.md
+  - Databases:
+      - MySQLDb: mysql.md
+  - DevOps Practices:
+      - Overview: devops.md
 
 extra:
   social:
