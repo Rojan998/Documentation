@@ -70,6 +70,13 @@ nav:
       - MySQLDb: mysql.md
   - DevOps Practices:
       - Overview: devops.md
+  - Miscellaneous:
+      - Git: git.md
+      - Linux: linux.md
+      - Bash: bash.md
+      - Python: python.md
+      - YAML: yaml.md
+      - Maven: maven.md
 
 extra:
   social:
