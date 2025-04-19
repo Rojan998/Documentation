@@ -1,4 +1,6 @@
-site_name: Devops
+site_name: Learning DevOps
+site_description: A collection of DevOps tools and technologies
+site_author: Rojan Adhikari
 site_url: https://docs.rojanadhikari.dev
 markdown_extensions:
   - attr_list
@@ -37,6 +39,18 @@ theme:
  
 nav: 
   - Jenkins: jenkins.md
+  - Docker: docker.md
+  - Docker-compose: docker-compose.md
+  - Jenkins-docker: jenkins-docker.md
+  - EKS: eks.md
+  - Sonarqube: sonarqube.md
+  - Nexus: nexus.md
+  - ELK stack: elk-stack.md
+  - Devops: devops.md
+  - Jenkins-Docker-K8s: jenkins-docker-k8s.md
+  - Ansible: ansible.md
+  - MySQLDb: mysql.md
+  - MiniKube: minikube.md
 
 
 extra:

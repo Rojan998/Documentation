@@ -1,40 +1,54 @@
-# Welcome to Jenkins Installation Guide
+# Jenkins Server Setup in Linux VM
 
-## Java17 Installation
+## Step - 1 : Create Linux VM
 
-Make a `.sh` file and paste the code below
+1. Create Ubuntu VM using AWS EC2 (t2.medium) <br/>
+2. Enable 8080 Port Number in Security Group Inbound Rules
+3. Connect to VM using MobaXterm
 
-    sudo apt update -y
-    sudo apt install fontconfig openjdk-17-jre -y
+## Step-2 : Instal Java
 
-<br>
+```
+sudo apt update
+sudo apt install fontconfig openjdk-17-jre
+java -version
+```
 
-    java --version
+## Step-3 : Install Jenkins
 
-## Install Jenkins LTS
+```
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+```
 
-Make a `.sh` file and paste the code below
+## Step-4 : Start Jenkins
 
-    sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
-    https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
-    echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
-    https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
-    /etc/apt/sources.list.d/jenkins.list > /dev/null
-    sudo apt-get update -y
-    sudo apt-get install jenkins -y
+```
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+```
 
-## Enable Jenkins
+## Step-5 : Verify Jenkins
 
-    sudo systemctl enable jenkins
+```
+sudo systemctl status jenkins
+```
 
-## Start Jenkins
+## Step-6 : Open jenkins server in browser using VM public ip
 
-    sudo systemctl start jenkins
+```
+http://public-ip:8080/
+```
 
-## Check Status
+## Step-7 : Copy jenkins admin pwd
 
-    sudo systemctl status jenkins
+```
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
 
-## Browse Jenkins
-
-Browse to `http://localhost:8080` (or whichever port you configured for Jenkins when installing it) and wait until the Unlock Jenkins page appears.
+## Step-8 : Create Admin Account & Install Required Plugins in Jenkins
